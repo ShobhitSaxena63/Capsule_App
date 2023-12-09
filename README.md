@@ -21,7 +21,7 @@
    &emsp;
 </p> 
 
-<h1>App Link</h1>
+<h3>App Link</h3>
 <a href="https://drive.google.com/file/d/1g8JzoRRIWPLABTKVMaoDvDhbwcK_lzQP/view?usp=sharing">Capsule App.apk</a>
 
 <h3>Video:</h3>
