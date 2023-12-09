@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray"
+    tools:context=".presentation.quiz.questions.QuizFragment">
+
+    <TextView
+        android:id="@+id/question_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_16dp"
+        android:text="@string/current_question"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="1/10" />
+
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_16dp"
+        android:text="@string/current_question"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="10s" />
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_16dp"
+        android:background="@drawable/question_bg"
+        android:gravity="center"
+        android:padding="@dimen/_16dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/question_number"
+        tools:text="@string/dummy_text" />
+
+    <Button
+        android:id="@+id/option_one"
+        style="@style/optionStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/question"
+        tools:text="onCreate" />
+
+    <Button
+        android:id="@+id/option_two"
+        style="@style/optionStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/option_one"
+        tools:text="onStart" />
+
+    <Button
+        android:id="@+id/option_three"
+        style="@style/optionStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/option_two"
+        tools:text="onResume" />
+
+    <Button
+        android:id="@+id/option_four"
+        style="@style/optionStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/option_three"
+        tools:text="onPause" />
+
+    <Button
+        android:id="@+id/next_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_40dp"
+        android:layout_marginEnd="@dimen/_16dp"
+        android:background="@drawable/btn_bg"
+        android:text="@string/next"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_18sp"
+        android:textStyle="bold"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/option_four"
+        tools:text="Next" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

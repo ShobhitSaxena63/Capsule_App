@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/quiz_nav"
+    app:startDestination="@id/startQuizFragment">
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="com.shobhit97.capsuleapp.presentation.quiz.questions.QuizFragment"
+        android:label="fragment_quiz"
+        tools:layout="@layout/fragment_quiz" >
+        <action
+            android:id="@+id/action_quizFragment_to_scoreFragment"
+            app:destination="@id/scoreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/startQuizFragment"
+        android:name="com.shobhit97.capsuleapp.presentation.quiz.start_quiz.StartQuizFragment"
+        android:label="fragment_start_quiz"
+        tools:layout="@layout/fragment_start_quiz" >
+        <action
+            android:id="@+id/action_startQuizFragment_to_quizFragment"
+            app:destination="@id/quizFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scoreFragment"
+        android:name="com.shobhit97.capsuleapp.presentation.quiz.score.ScoreFragment"
+        android:label="fragment_score"
+        tools:layout="@layout/fragment_score" >
+        <argument
+            android:name="score"
+            app:argType="integer" />
+        <argument
+            android:name="total"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_scoreFragment_to_quizFragment"
+            app:destination="@id/quizFragment"
+            app:popUpTo="@id/quizFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

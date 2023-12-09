@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.quiz.score.ScoreFragment">
+
+    <TextView
+        android:id="@+id/score_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/score"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/score"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_26sp"
+        app:layout_constraintBottom_toTopOf="@id/restart_quiz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/score_title"
+        tools:text="5/10" />
+
+    <Button
+        android:id="@+id/restart_quiz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_bg"
+        android:text="@string/restart"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_18sp"
+        android:layout_marginTop="@dimen/_40dp"
+        android:textStyle="bold"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/score"
+        tools:text="Restart" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
